@@ -1,0 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.numsmayoramenor;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author carlo
+ */
+public class App {
+
+    public static void main(String[] args) {
+    Scanner sp=new Scanner(System.in);
+        System.out.println("Ingrese 3 números enteros diferentes:");
+        System.out.println("Ingrese el primer número:");
+        int Num1=sp.nextInt();
+        System.out.println("Ingrese el segundo número:");
+        int Num2=sp.nextInt();
+        System.out.println("Ingrese el tercer número:");
+        int Num3=sp.nextInt();
+        if (Num1!=Num2 && Num1!=Num3 && Num2!=Num3)
+            System.out.println("Los numeros han sido ingresados correctamente");
+        if (Num1>Num2 && Num2>Num3)
+        System.out.println("El orden correcto es: "+Num1+" ->"+Num2+" ->"+Num3);
+        else
+        if (Num1<Num2 && Num2<Num3)
+        System.out.println("El orden correcto es: "+Num3+" ->"+Num2+" ->"+Num1);
+        else
+        if (Num1>Num2 && Num2<Num3)
+        System.out.println("El orden correcto es: "+Num3+" ->"+Num1+" ->"+Num2);
+        else
+        if (Num1<Num3 && Num2>Num3)
+        System.out.println("El orden correcto es: "+Num2+" ->"+Num3+" ->"+Num1);
+        else
+        if (Num1>Num3 && Num2>Num1)
+        System.out.println("El orden correcto es: "+Num2+" ->"+Num1+" ->"+Num3);
+        else
+        if (Num1>Num3 && Num2<Num3)
+        System.out.println("El orden correcto es: "+Num1+" ->"+Num3+" ->"+Num2);
+        else
+        if (Num1!=Num2 && Num2==Num3)
+        System.out.println("El numero: "+Num1+" es mayor a "+Num2+" ya que el numero se repite 2 veces");
+        else
+        if (Num2!=Num1 && Num1==Num3)
+        System.out.println("El numero: "+Num2+" es mayor a "+Num1+" ya que el numero se repite 2 veces ");
+        else
+        if (Num3!=Num1 && Num1==Num2)
+        System.out.println("El numero: "+Num3+" es mayor a "+Num1+" ya que el numero se repite 2 veces ");
+        else 
+            if(Num1==Num2 && Num1==Num3)
+                System.out.println("Los numeros son IGUALES: "+Num1+ " por favor ingrese 3 numeros diferentes");
+    }
+}
